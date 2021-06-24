@@ -6,7 +6,7 @@ import {
   selectedProduct,
   removeSelectedProduct,
 } from "../redux/actions/productActions";
-const ProductDetails = () => {
+const ProductDetail = () => {
   const { productId } = useParams();
   let product = useSelector((state) => state.product);
   const { image, title, price, category, description } = product;
@@ -33,7 +33,7 @@ const ProductDetails = () => {
       ) : (
         <div className="ui placeholder segment">
           <div className="ui two column stackable center aligned grid">
-            <div className="ui vertical divider">And</div>
+            <div className="ui vertical divider">AND</div>
             <div className="middle aligned row">
               <div className="column lp">
                 <img className="ui fluid image" src={image} />
@@ -60,4 +60,4 @@ const ProductDetails = () => {
   );
 };
 
-export default ProductDetails;
+export default ProductDetail;
